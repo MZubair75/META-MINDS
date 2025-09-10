@@ -7,16 +7,27 @@ This document provides a comprehensive overview of the Meta Minds project struct
 ## 🏗️ **Overall Architecture**
 
 ```
-META_MINDS_INDIVIDUAL/
-├── 📂 src/core/              # Core analysis engine
-├── 📂 config/               # Configuration files  
-├── 📂 Output/               # Generated reports
-├── 📂 data/                 # Sample datasets (optional)
-├── 📄 user_context.json     # User preference persistence
-├── 📄 .env                  # Environment variables
-├── 📄 main.py              # Main entry point
-├── 📄 README.md            # Project documentation
-└── 📄 PROJECT_STRUCTURE.md # This file
+1. META_MINDS/
+├── 📂 src/                   # Complete source code
+│   ├── 📂 core/              # Core analysis engine
+│   ├── 📂 agents/            # AI agents
+│   ├── 📂 integrations/      # External integrations
+│   ├── 📂 ml/                # Machine learning
+│   ├── 📂 tests/             # Test code
+│   ├── 📂 ui/                # User interface
+│   └── 📂 workflows/         # Workflow management
+├── 📂 input/                 # Hybrid input system (3 files)
+│   ├── Business_Background.txt    # Project context
+│   ├── Dataset_Background.txt     # Dataset-specific context
+│   └── message.txt               # Senior instructions
+├── 📂 docs/                  # Documentation
+├── 📂 examples/              # Examples and demos
+├── 📂 workflows/             # Workflow definitions
+├── 📄 .gitignore             # Git ignore rules
+├── 📄 env.example            # Environment template
+├── 📄 requirements.txt       # Python dependencies
+├── 📄 README.md              # Project documentation
+└── 📄 PROJECT_STRUCTURE.md   # This file
 ```
 
 ---
@@ -29,7 +40,7 @@ META_MINDS_INDIVIDUAL/
 
 | File | Purpose | Key Features | Dependencies |
 |------|---------|--------------|--------------|
-| **`main.py`** | 🎯 **Main Orchestrator** | Entry point, workflow coordination, user interaction | All core modules |
+| **`main.py`** | 🎯 **Main Orchestrator** | Entry point, workflow coordination, offline mode, user interaction | All core modules |
 | **`config.py`** | ⚙️ **Configuration Hub** | OpenAI client setup, logging configuration, environment management | `openai`, `logging` |
 | **`data_loader.py`** | 📁 **Data Processing** | Multi-format file loading (CSV/Excel/JSON), validation, error handling | `pandas`, `openpyxl` |
 | **`data_analyzer.py`** | 🔍 **Dataset Analysis** | Column description generation, data summarization, GPT integration | `openai`, `pandas` |
@@ -43,7 +54,7 @@ META_MINDS_INDIVIDUAL/
 | **`tasks.py`** | 📋 **Task Orchestration** | Dynamic task creation, SMART vs standard modes, validation workflows | `crewai` |
 | **`smart_question_generator.py`** | 🧠 **SMART Engine** | Advanced question generation with diversity framework, business templates | `openai`, `numpy`, `pandas` |
 | **`smart_validator.py`** | ✅ **Quality Control** | Multi-layer validation, SMART compliance scoring, quality thresholds | `dataclasses`, `re` |
-| **`context_collector.py`** | 📝 **Context Management** | Interactive user input, business template system, preference persistence | `json`, `datetime` |
+| **`context_collector.py`** | 📝 **Context Management** | Hybrid input system, business template system, preference persistence | `json`, `datetime` |
 
 ---
 
@@ -51,9 +62,11 @@ META_MINDS_INDIVIDUAL/
 
 ### **📊 Data Flow Architecture**
 ```
-User Input → Context Collection → Data Loading → Analysis → AI Processing → Validation → Report Generation
-     ↑              ↓                 ↓             ↓           ↓             ↓              ↓
+User Input → Hybrid Context Collection → Data Loading → Analysis → AI Processing → Validation → Report Generation
+     ↑              ↓                         ↓             ↓           ↓             ↓              ↓
    main.py → context_collector → data_loader → data_analyzer → agents → smart_validator → output_handler
+     ↑              ↓                         ↓             ↓           ↓             ↓              ↓
+  Offline Mode → input/ folder → fallback → offline → context-aware → quality → professional
 ```
 
 ### **🤖 AI Processing Pipeline**
@@ -63,6 +76,8 @@ Dataset Analysis → Question Generation → Quality Validation → Report Forma
   data_analyzer → smart_question_generator → smart_validator → output_handler
        ↑                    ↑                   ↑                    ↑
    GPT-4 API         Diversity Framework    SMART Methodology    Professional Templates
+       ↑                    ↑                   ↑                    ↑
+  Offline Mode      Context-Aware Questions  Business Integration  Executive Focus
 ```
 
 ---
@@ -73,17 +88,20 @@ Dataset Analysis → Question Generation → Quality Validation → Report Forma
 ```python
 # Main workflow orchestration
 def main():
-    # 1. Context collection & validation
+    # 1. Hybrid context collection & validation
     # 2. Dataset loading & processing  
     # 3. AI agent creation & configuration
     # 4. Task execution & monitoring
     # 5. Quality validation & scoring
     # 6. Report generation & output
+    # 7. Offline fallback mode handling
 ```
 
 **Key Functions:**
 - `check_dependencies()` - Validates Python version, API keys, required packages
-- `interactive_file_selection()` - Handles dataset path collection and validation
+- `get_smart_analysis_context()` - Hybrid context collection from input files
+- `_detect_rate_limiting()` - Automatic offline mode detection
+- `_generate_offline_results()` - Offline fallback with context-aware questions
 - `main()` - Primary workflow coordinator
 
 ### **⚙️ `config.py` - Configuration Management**
@@ -219,7 +237,19 @@ class DatasetContext:
     target_audience: str
     business_context: str
     time_sensitivity: str
+
+def collect_context_hybrid():
+    # 1. Read from input/ folder (Business_Background.txt, Dataset_Background.txt, message.txt)
+    # 2. Fallback to interactive prompts if insufficient
+    # 3. Combine for maximum context quality
 ```
+
+**Hybrid Input System:**
+- **Business_Background.txt** - Project context, objectives, audience
+- **Dataset_Background.txt** - Dataset-specific context and details
+- **message.txt** - Senior stakeholder instructions and strategic priorities
+- **Interactive Fallback** - Traditional prompts if input files insufficient
+- **Context Integration** - Combines file content with user preferences
 
 **Context Templates:**
 - **Financial Analysis** - Performance evaluation, risk assessment
@@ -248,9 +278,9 @@ def save_separate_reports(datasets, results, context):
 
 ## 📊 **Configuration Files**
 
-### **📄 `.env` - Environment Variables**
+### **📄 `.env` - Environment Variables (Local Only)**
 ```bash
-# Required
+# Required (optional - offline mode available)
 OPENAI_API_KEY=your_openai_api_key_here
 
 # Optional
@@ -259,7 +289,23 @@ OUTPUT_DIRECTORY=Output
 MAX_QUESTIONS_PER_DATASET=30
 ```
 
-### **📄 `user_context.json` - User Preferences**
+### **📄 `env.example` - Environment Template (GitHub)**
+```bash
+# OpenAI API Configuration
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Optional Configuration
+LOG_LEVEL=INFO
+OUTPUT_DIRECTORY=Output
+MAX_QUESTIONS_PER_DATASET=30
+
+# Instructions:
+# 1. Copy this file to .env
+# 2. Replace 'your_openai_api_key_here' with your actual OpenAI API key
+# 3. The .env file will be ignored by git for security
+```
+
+### **📄 `user_context.json` - User Preferences (Local Only)**
 ```json
 [
   {
@@ -273,18 +319,55 @@ MAX_QUESTIONS_PER_DATASET=30
 ]
 ```
 
+### **📄 `.gitignore` - Git Ignore Rules (GitHub)**
+```gitignore
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Output files
+Output/
+*.txt
+!requirements.txt
+
+# User context (contains personal preferences)
+user_context.json
+
+# Input files (users should create their own)
+input/Business_Background.txt
+input/Dataset_Background.txt
+input/message.txt
+```
+
 ---
 
 ## 📈 **Output Structure**
 
-### **📂 `Output/` - Generated Reports**
+### **📂 `Output/` - Generated Reports (Local Only)**
 ```
-Output/
-├── Individual_Financialanalysis_Performanceevaluation_Executives_2025-01-08_14-30.txt
-├── Cross-Dataset_Financialanalysis_Performanceevaluation_Executives_2025-01-08_14-30.txt
+Output/ (excluded from GitHub)
+├── Individual_Financialanalysis_Riskassessmentriskas_Executives_2025-09-10_21-05.txt
+├── Cross-Dataset_Financialanalysis_Riskassessmentriskas_Executives_2025-09-10_21-05.txt
 ├── Individual_Salesperformance_Riskassessment_Managers_2025-01-08_16-45.txt
 └── Cross-Dataset_Salesperformance_Riskassessment_Managers_2025-01-08_16-45.txt
 ```
+
+**Features:**
+- ✅ **Context-aware questions** with business background integration
+- ✅ **Executive-focused language** and strategic orientation
+- ✅ **Industry-specific terminology** and risk assessment focus
+- ✅ **Offline mode capability** with 100% reliability
 
 **Naming Convention:**
 - **Format**: `[Type]_[Focus]_[Objective]_[Audience]_[DateTime].txt`
@@ -341,16 +424,19 @@ python-dotenv>=0.19.0  # Environment variable management
 ## 📋 **Usage Patterns**
 
 ### **Standard Analysis Workflow**
-1. **Context Collection** → Business domain and objectives
+1. **Hybrid Context Collection** → Input files + interactive prompts
 2. **Dataset Loading** → Multi-file processing and validation
-3. **AI Processing** → Question generation and quality scoring
-4. **Report Generation** → Professional output formatting
+3. **AI Processing** → Context-aware question generation and quality scoring
+4. **Offline Fallback** → Automatic fallback if API limits reached
+5. **Report Generation** → Professional output formatting
 
 ### **Customization Options**
 - **Question Counts**: Configurable per dataset and cross-dataset
-- **Business Context**: 17+ predefined templates
+- **Business Context**: 17+ predefined templates + hybrid input system
 - **Quality Thresholds**: Adjustable scoring criteria
 - **Output Format**: Customizable report structure
+- **Input System**: File-based context + interactive prompts
+- **Offline Mode**: 100% reliability with context-aware fallback
 
 ### **Integration Points**
 - **API Integration**: Extensible for BI tool integration
@@ -359,4 +445,4 @@ python-dotenv>=0.19.0  # Environment variable management
 
 ---
 
-**This structure enables Meta Minds to deliver professional-grade AI-powered data analysis with enterprise scalability and user-friendly operation.** 🧠✨
+**This structure enables Meta Minds to deliver professional-grade AI-powered data analysis with hybrid input system, offline fallback mode, context-aware question generation, and enterprise scalability.** 🧠✨
