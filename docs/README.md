@@ -54,6 +54,7 @@ Meta Minds is an intelligent data analysis tool that leverages AI to automatical
    ```
    input/
    ├── Business_Background.txt    # Project context, objectives, audience
+   ├── Dataset_Background.txt     # Dataset-specific context and details
    └── message.txt               # Senior stakeholder instructions
    ```
 
@@ -81,6 +82,7 @@ Meta Minds is an intelligent data analysis tool that leverages AI to automatical
 ├── requirements.txt        # Python dependencies
 ├── input/                  # Input system folder
 │   ├── Business_Background.txt    # Project context
+│   ├── Dataset_Background.txt     # Dataset-specific context
 │   └── message.txt               # Senior instructions
 ├── src/
 │   └── core/
