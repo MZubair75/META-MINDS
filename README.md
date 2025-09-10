@@ -5,8 +5,9 @@
 [![CrewAI](https://img.shields.io/badge/Framework-CrewAI-orange.svg)](https://crewai.com)
 [![SMART](https://img.shields.io/badge/Methodology-SMART-purple.svg)](https://github.com)
 [![Enterprise](https://img.shields.io/badge/Enterprise-Ready-gold.svg)](https://github.com)
+[![Offline](https://img.shields.io/badge/Offline-Mode-red.svg)](https://github.com)
 
-**Meta Minds** is a production-ready AI-powered data analysis platform that generates high-quality, diverse analytical questions using SMART methodology. Transform your datasets into actionable business insights with professional-grade reports and executive-ready deliverables.
+**Meta Minds** is a production-ready AI-powered data analysis platform that generates high-quality, diverse analytical questions using SMART methodology exclusively. Features hybrid input system, offline fallback mode, and transforms datasets into actionable business insights with professional-grade reports and executive-ready deliverables.
 
 ---
 
@@ -15,9 +16,11 @@
 ✨ **SMART Question Generation**: Specific, Measurable, Action-oriented, Relevant, Time-bound questions  
 🎨 **Question Diversity Framework**: 5 analytical categories with business-specific templates  
 📊 **Multi-Dataset Analysis**: Process multiple datasets with cross-dataset insights  
-🏢 **Business Context Integration**: 17+ industry-specific analysis templates  
+🏢 **Hybrid Input System**: File-based context + interactive prompts for maximum flexibility  
 📁 **Professional Output Structure**: Timestamped, organized reports in structured folders  
 ⚡ **97%+ Quality Scores**: Consistent high-quality analysis powered by GPT-4  
+🔄 **Offline Fallback Mode**: Robust operation even without API access  
+📋 **Context-Aware Analysis**: Business background integration for superior question quality  
 
 ---
 
@@ -32,21 +35,29 @@
 
 ```bash
 # 1. Navigate to project directory
-cd META_MINDS_INDIVIDUAL
+cd "1. META_MINDS"
 
-# 2. Create .env file with your OpenAI API key
+# 2. Create virtual environment
+python -m venv venv
+.\venv\Scripts\Activate.ps1  # Windows PowerShell
+# source venv/bin/activate   # Linux/Mac
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Create .env file with your OpenAI API key
 echo "OPENAI_API_KEY=your_api_key_here" > .env
 
-# 3. Run the analysis platform
-py -3.13 main.py
+# 5. Run the analysis platform
+py src\core\main.py
 ```
 
 ### First Run Experience
-1. **Choose Analysis Mode**: SMART Analysis (recommended) 
-2. **Select Business Context**: Financial, Sales, Marketing, Operations, etc.
-3. **Configure Questions**: 15 per dataset + 10 cross-dataset comparisons
-4. **Provide Dataset Paths**: Point to your CSV/Excel files
-5. **Get Professional Reports**: Find outputs in structured `/Output` folder
+1. **Hybrid Context Collection**: Reads from `input/` folder + interactive prompts
+2. **Configure Questions**: 15 per dataset + 10 cross-dataset comparisons  
+3. **Provide Dataset Paths**: Point to your CSV/Excel files
+4. **Get Professional Reports**: Find outputs in structured `/Output` folder
+5. **Offline Fallback**: Automatic fallback if API limits reached
 
 ---
 
@@ -87,6 +98,20 @@ py -3.13 main.py
    - Cause-effect relationships
    - Interaction effects and synergies
 ```
+
+### 🏢 **Hybrid Input System**
+```
+input/
+├── Business_Background.txt    # Project context, objectives, audience
+├── Dataset_Background.txt     # Dataset-specific context and details
+└── message.txt               # Senior stakeholder instructions
+```
+
+**Benefits:**
+- ✅ **Consistent Context**: Standardized input across all automations
+- ✅ **Quality Enhancement**: Context-aware question generation
+- ✅ **Executive Focus**: Senior stakeholder priorities integrated
+- ✅ **Flexible Operation**: File-based + interactive fallback
 
 ### 🏢 **Business Context Templates**
 - **Financial Analysis**: Performance evaluation, risk assessment
@@ -148,6 +173,8 @@ Output/
 - **Framework**: CrewAI for agent orchestration
 - **Validation**: Multi-layer quality scoring system
 - **Context Awareness**: Business domain-specific templates
+- **Offline Mode**: Robust fallback with context-aware questions
+- **Rate Limiting**: Automatic detection and graceful degradation
 
 ---
 
@@ -160,6 +187,21 @@ individual_questions = 15
 
 # Cross-dataset comparison questions (recommended: 5-15)  
 comparison_questions = 10
+```
+
+### Input System Configuration
+```
+# Create input/ folder with context files
+input/
+├── Business_Background.txt    # Project details, objectives, audience
+└── message.txt               # Senior stakeholder instructions
+
+# Example Business_Background.txt:
+DATASET BACKGROUND INFORMATION
+Project Title: Airline Financial Performance Risk Assessment
+Business Context: Aviation/Airline Industry
+Analysis Objectives: Risk assessment, performance evaluation
+Target Audience: Executives, Financial Analysts
 ```
 
 ### Business Context Selection
@@ -274,12 +316,17 @@ For support, feature requests, or business inquiries:
 ✅ Business context integration  
 ✅ Question diversity framework  
 ✅ 97%+ quality scoring  
+✅ Hybrid input system  
+✅ Offline fallback mode  
+✅ Rate limiting handling  
+✅ Context-aware question generation  
 
 ### Upcoming Features (v1.1)
 🔄 Advanced visualization dashboards  
 🔄 Real-time collaboration features  
 🔄 API endpoint development  
 🔄 Cloud deployment options  
+🔄 Enhanced offline mode capabilities  
 
 ---
 
