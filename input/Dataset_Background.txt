@@ -1,0 +1,53 @@
+DATASET BACKGROUND INFORMATION
+==============================
+
+Project Title: [Your Project Name]
+
+Business Context:
+- Industry/Domain: [Your Industry - e.g., Finance, Healthcare, Retail, Technology]
+- Business Problem: [Brief description of the business challenge you're addressing]
+- Stakeholders: [Who will use this analysis - e.g., Executives, Managers, Analysts]
+
+Dataset Information:
+- Data Sources: 
+  * [Path to Dataset 1 - e.g., C:\Data\sales_data.csv]
+  * [Path to Dataset 2 - e.g., C:\Data\customer_data.csv]
+  * [Path to Dataset 3 - e.g., C:\Data\performance_metrics.csv]
+- Data Size: [Description of data size - e.g., 5 years of sales data, 10,000 customer records]
+- Data Quality: [Data quality notes - e.g., Clean data, Some missing values, Historical records]
+- Time Period: [Time range - e.g., 2020-2024, Last 3 years, Monthly data for 2 years]
+
+Analysis Objectives:
+- Primary Goals: [Main objectives - e.g., Performance evaluation, Risk assessment, Optimization]
+- Secondary Goals: [Additional goals - e.g., Trend analysis, Benchmarking, Forecasting]
+- Success Criteria: [How you'll measure success - e.g., Identify patterns, Clear recommendations]
+
+Timeline & Constraints:
+- Project Start: [When the project begins]
+- Deadline: [When results are needed]
+- Budget Constraints: [Any budget limitations]
+- Technical Constraints: [Technical requirements or limitations]
+
+Target Audience:
+- Primary: [Main audience - e.g., Executives, Managers, Analysts]
+- Technical Level: [Audience expertise - e.g., High-level strategic, Technical detailed]
+- Presentation Format: [How results will be presented - e.g., Executive summary, Detailed report]
+
+Business Context Details:
+- Subject Area: [Focus area - e.g., Financial analysis, Sales performance, Operations]
+- Business Context: [Broader business context - e.g., Strategic planning, Operational improvement]
+- Time Sensitivity: [Urgency level - e.g., High, Medium, Low]
+- Industry Focus: [Specific industry considerations]
+
+Expected Deliverables:
+- Reports: [Types of reports needed]
+- Visualizations: [Charts, dashboards, etc.]
+- Recommendations: [Actionable insights required]
+
+Dataset Specifics:
+- [Dataset 1 Name]: [Description of what this dataset contains and its business relevance]
+- [Dataset 2 Name]: [Description of what this dataset contains and its business relevance]
+- [Dataset 3 Name]: [Description of what this dataset contains and its business relevance]
+
+Notes:
+[Any additional context about the datasets, data quality issues, special considerations, or important background information that will help generate better questions]

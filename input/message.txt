@@ -1,0 +1,53 @@
+SENIOR MESSAGE / INSTRUCTIONS
+=============================
+
+From: [Senior Stakeholder - e.g., CEO, CFO, VP of Operations]
+To: Data Analysis Team  
+Date: [Current Date]
+Subject: [Project Name] - Strategic Priority
+
+Priority Level: [High/Medium/Low]
+
+Key Instructions:
+[Brief description of what the senior stakeholder wants to achieve with this analysis. Focus on strategic objectives and business impact.]
+
+Focus Areas:
+- [Area 1]: [Specific focus - e.g., Financial stability, Performance trends, Risk mitigation]
+- [Area 2]: [Specific focus - e.g., Cost optimization, Revenue growth, Operational efficiency]
+- [Area 3]: [Specific focus - e.g., Market positioning, Competitive analysis, Customer insights]
+- [Area 4]: [Specific focus - e.g., Strategic insights, Actionable recommendations]
+
+Analysis Approach:
+[Guidance on how to approach the analysis - e.g., Use quantitative analysis, Focus on trends, Emphasize practical applications]
+
+Stakeholder Considerations:
+[Who will use the results and how - e.g., Results will be presented to board of directors, Used for strategic planning, Inform operational decisions]
+
+Timeline Notes:
+[Timeline considerations - e.g., Supporting upcoming presentations, Informing budget decisions, Guiding strategic planning]
+
+Risk Factors:
+Pay special attention to:
+- [Risk Factor 1 - e.g., Economic downturns, Market volatility]
+- [Risk Factor 2 - e.g., Competitive threats, Regulatory changes]
+- [Risk Factor 3 - e.g., Operational challenges, Technology disruptions]
+- [Risk Factor 4 - e.g., Customer behavior changes, Supply chain issues]
+
+Quality Requirements:
+[Quality standards - e.g., High-confidence insights, Clear supporting evidence, Include uncertainty analysis, Highlight key assumptions]
+
+Presentation Requirements:
+[How results should be presented - e.g., Executive-level summary, Clear visualizations, Actionable recommendations, Strategic implications]
+
+Success Metrics:
+Analysis should enable informed decisions about:
+- [Decision Area 1 - e.g., Investment priorities, Resource allocation]
+- [Decision Area 2 - e.g., Risk management, Strategic direction]
+- [Decision Area 3 - e.g., Operational improvements, Market positioning]
+- [Decision Area 4 - e.g., Performance optimization, Growth strategies]
+
+Special Instructions:
+[Any special considerations - e.g., Consider industry context, Focus on practical applications, Emphasize forward-looking insights]
+
+Additional Notes:
+[Any additional context, constraints, or important information that will help generate better questions]
